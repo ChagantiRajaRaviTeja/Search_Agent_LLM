@@ -32,7 +32,7 @@ def scrape_linkedin_profile(linkedin_profile_url: str, mock: bool = True):
         for k, v in data.items()
         if v not in ([], "", "", None)
         and k not in ["people_also_viewed", "certifications"]
-    } #filtering out unwanted info
+    }  # filtering out unwanted info
     if data.get("groups"):
         for group_dict in data.get("groups"):
             group_dict.pop("profile_pic_url")
