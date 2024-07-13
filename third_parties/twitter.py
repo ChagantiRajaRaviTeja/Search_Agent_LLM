@@ -6,13 +6,14 @@ import requests
 load_dotenv()
 
 
-twitter_client = tweepy.Client(
-    bearer_token=os.environ["TWITTER_BEARER_TOKEN"],
-    consumer_key=os.environ["TWITTER_API_KEY"],
-    consumer_secret=os.environ["TWITTER_API_KEY_SECRET"],
-    access_token=os.environ["TWITTER_ACCESS_TOKEN"],
-    access_token_secret=os.environ["TWITTER_ACCESS_TOKEN_SECRET"],
-)
+# twitter_client = tweepy.Client(
+#     bearer_token=os.environ["TWITTER_BEARER_TOKEN"],
+#     consumer_key=os.environ["TWITTER_API_KEY"],
+#     consumer_secret=os.environ["TWITTER_API_KEY_SECRET"],
+#     access_token=os.environ["TWITTER_ACCESS_TOKEN"],
+#     access_token_secret=os.environ["TWITTER_ACCESS_TOKEN_SECRET"],
+# )
+# twitter needs us to pay around some 100$ for getting access to their API, so using the gist file instructor has provided
 
 
 def scrape_user_tweets(username, num_tweets=5, mock: bool = False):
@@ -44,5 +45,5 @@ def scrape_user_tweets(username, num_tweets=5, mock: bool = False):
 
 if __name__ == "__main__":
 
-    tweets = scrape_user_tweets(username="EdenEmarco177", mock=True)
-    print(tweets)
+    tweets = scrape_user_tweets(username="EdenEmarco177", mock=True) # Udemy instructor's twitter username
+    print(tweets) # with mock=True, got response: [{'text': '🚨 Demo Alert: risks when deploying insecure LLM agents 🤖\n(Spoiler: total environment compromise!)🚨\n\nIn a recent demo, I showcased what happens when deploying an LLM Agent to the cloud without taking basic security measures.\nThe outcome was alarming☠️\nan exploitable… https://t.co/OKoxiOUFGQ https://t.co/DPi8aVcPls', 'url': 'https://twitter.com/EdenEmarco177/status/1767277531537744100'}, {'text': 'Contextual Answers from the @AI21Labs team is a fantastic model when you want the LLM to always stay within the provided context.\nThe main benefits for using this kind of model are:\n\n1.  Significant reduction in hallucinations, enhancing accuracy and reliability.\n\n2.  Improved… https://t.co/rqTuHdvOMU https://t.co/6OUIHorMrf', 'url': 'https://twitter.com/EdenEmarco177/status/1766014021033972000'}]
