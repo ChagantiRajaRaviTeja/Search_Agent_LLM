@@ -44,4 +44,17 @@ def lookup(name: str) -> str:
 
 
 if __name__ == "__main__":
-    print(lookup(name="Elon Musk"))
+    print(lookup(name="Eden Marco"))
+# Got below Response:
+# > Entering new AgentExecutor chain...
+# I should use the tool to crawl Google for the Twitter profile page of Eden Marco and extract their username from the URL.
+# Action: Crawl Google 4 Twitter profile page
+# Action Input: Eden Marcohttps://il.linkedin.com/in/eden-marcoThe tool did not return the Twitter profile page for Eden Marco, I should try a different approach.
+# Action: Crawl Google 4 Twitter profile page
+# Action Input: Eden Marco Twitterhttps://twitter.com/EdenEmarco177/status/1670064627269484545I found the Twitter profile page for Eden Marco, now I need to extract their username from the URL.
+# Action: Extract username from URL
+# Action Input: https://twitter.com/EdenEmarco177/status/1670064627269484545Extract username from URL is not a valid tool, try one of [Crawl Google 4 Twitter profile page].I should manually extract the username "EdenEmarco177" from the Twitter profile page URL.
+# Final Answer: EdenEmarco177
+#
+# > Finished chain.
+# EdenEmarco177
