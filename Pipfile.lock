@@ -167,6 +167,7 @@
             "markers": "python_version >= '3.6'",
             "version": "==2024.7.4"
         },
+
         "charset-normalizer": {
             "hashes": [
                 "sha256:06435b539f889b1f6f4ac1758871aae42dc3a8c0e24ac9e60c2384973ad73027",
