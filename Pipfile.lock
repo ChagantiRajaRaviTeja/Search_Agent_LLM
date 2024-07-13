@@ -130,6 +130,7 @@
             "markers": "python_version >= '3.7'",
             "version": "==23.2.0"
         },
+
         "black": {
             "hashes": [
                 "sha256:257d724c2c9b1660f353b36c802ccece186a30accc7742c176d29c146df6e474",
